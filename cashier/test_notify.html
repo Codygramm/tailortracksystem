@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Notify Button</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Test Notify Button</h2>
+        <p>Click the bell button below to test if the modal opens:</p>
+
+        <button class="btn btn-outline-info notify-customer"
+                data-id="TEST001"
+                data-name="John Doe"
+                data-phone="0123456789"
+                data-email="john@example.com"
+                data-amount="500.00"
+                data-paid="200.00"
+                title="Notify Customer">
+            <i class="fas fa-bell"></i> Test Notify
+        </button>
+    </div>
+
+    <!-- Customer Notification Modal -->
+    <div class="modal fade" id="notifyModal" tabindex="-1" aria-labelledby="notifyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header bg-info text-white">
+                    <h5 class="modal-title" id="notifyModalLabel">
+                        <i class="fas fa-bell me-2"></i>Notify Customer - Order Ready for Collection
+                    </h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="notifyAlert"></div>
+
+                    <!-- Customer Information -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0"><i class="fas fa-user me-2"></i>Customer Information</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <p><strong>Name:</strong> <span id="notifyCustomerName"></span></p>
+                                    <p><strong>Phone:</strong> <span id="notifyCustomerPhone"></span></p>
+                                </div>
+                                <div class="col-md-6">
+                                    <p><strong>Order ID:</strong> <span id="notifyOrderId"></span></p>
+                                    <p><strong>Email:</strong> <span id="notifyCustomerEmail"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Payment Details -->
+                    <div class="card mb-3">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0"><i class="fas fa-money-bill-wave me-2"></i>Payment Details</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p><strong>Total Amount:</strong><br>
+                                        <span class="text-primary h5">RM <span id="notifyTotalAmount"></span></span>
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><strong>Amount Paid:</strong><br>
+                                        <span class="text-success h5">RM <span id="notifyPaidAmount"></span></span>
+                                    </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p><strong>Balance Due:</strong><br>
+                                        <span class="text-danger h5">RM <span id="notifyBalance"></span></span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notification Method -->
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h6 class="mb-0"><i class="fas fa-paper-plane me-2"></i>Send Notification</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-success btn-lg w-100" id="sendWhatsAppBtn">
+                                        <i class="fab fa-whatsapp me-2"></i>Send WhatsApp Message
+                                    </button>
+                                    <small class="text-muted d-block mt-2">
+                                        Opens WhatsApp with pre-filled message
+                                    </small>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary btn-lg w-100" id="sendEmailBtn">
+                                        <i class="fas fa-envelope me-2"></i>Send Email
+                                    </button>
+                                    <small class="text-muted d-block mt-2">
+                                        Sends email notification to customer
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/cashier.js"></script>
+
+    <script>
+        // Debug: Log when page loads
+        console.log('Test page loaded');
+        console.log('Bootstrap version:', bootstrap.Modal ? 'loaded' : 'NOT loaded');
+        console.log('Cashier.js loaded');
+
+        // Debug: Check if modal element exists
+        setTimeout(() => {
+            const modal = document.getElementById('notifyModal');
+            console.log('Modal element exists:', modal !== null);
+
+            const button = document.querySelector('.notify-customer');
+            console.log('Button exists:', button !== null);
+
+            if (button) {
+                console.log('Button data attributes:', {
+                    id: button.getAttribute('data-id'),
+                    name: button.getAttribute('data-name'),
+                    phone: button.getAttribute('data-phone'),
+                    email: button.getAttribute('data-email'),
+                    amount: button.getAttribute('data-amount'),
+                    paid: button.getAttribute('data-paid')
+                });
+            }
+        }, 500);
+    </script>
+</body>
+</html>

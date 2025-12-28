@@ -1,0 +1,1175 @@
+/* Color Variables */
+:root {
+    --primary: #25344F;
+    --secondary: #617891;
+    --accent: #D5B893;
+    --brown: #6F4D38;
+    --dark-red: #632024;
+    --light: #f8f9fa;
+    --dark: #212529;
+}
+
+/* Global Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    overflow-x: hidden;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--primary);
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin: 0 10px;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent);
+}
+
+.btn-outline-light {
+    padding: 8px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-2px);
+}
+
+/* Page Hero */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 150px 0 100px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/hero/tailor-shop-1.jpg') center/cover;
+    opacity: 0.1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.breadcrumb-nav {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 25px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+}
+
+.breadcrumb-nav a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.breadcrumb-nav a:hover {
+    color: var(--accent);
+}
+
+.breadcrumb-nav span {
+    opacity: 0.7;
+}
+
+/* Tracking Section */
+.tracking-section {
+    background-color: var(--light);
+}
+
+.tracking-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+.tracking-card .card-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.tracking-card .card-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.tracking-card .card-header p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.tracking-form {
+    padding: 40px;
+}
+
+.form-group {
+    margin-bottom: 0;
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--primary);
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.form-control-lg {
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.form-control-lg:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(213, 184, 147, 0.25);
+}
+
+.form-text {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin-top: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary);
+    border-color: var(--primary);
+    padding: 15px 30px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Tracking Result */
+.tracking-result {
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tracking-status {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+/* Info Cards */
+.info-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--accent);
+}
+
+.info-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.info-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--brown) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.info-card h5 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    color: var(--secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Status Guide */
+.status-guide {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.status-guide h3 {
+    color: var(--primary);
+    font-weight: 700;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.status-guide h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--accent);
+}
+
+.status-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    margin-bottom: 15px;
+    background: var(--light);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.status-item:hover {
+    background: #e9ecef;
+    transform: translateX(5px);
+}
+
+.status-badge {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.status-badge.pending {
+    background: linear-gradient(135deg, #6c757d, #5a6268);
+}
+
+.status-badge.assigned {
+    background: linear-gradient(135deg, #0dcaf0, #0aa2c0);
+}
+
+.status-badge.in-progress {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+}
+
+.status-badge.completed {
+    background: linear-gradient(135deg, #198754, #146c43);
+}
+
+.status-badge.paid {
+    background: linear-gradient(135deg, #0d6efd, #0a58ca);
+}
+
+.status-item h6 {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.status-item p {
+    color: var(--secondary);
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--brown) 100%);
+    color: white;
+    padding: 40px 0;
+}
+
+.cta-section h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.cta-section p {
+    opacity: 0.95;
+}
+
+.cta-section .btn-light {
+    background: white;
+    color: var(--primary);
+    font-weight: 600;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-light:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 60px 0 20px;
+}
+
+.footer h5 {
+    color: var(--accent);
+    margin-bottom: 20px;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--accent);
+}
+
+/* Order Result Styling */
+.order-result {
+    animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.result-header {
+    padding: 25px 30px;
+    border-bottom: 3px solid var(--accent);
+    background: linear-gradient(135deg, rgba(97, 120, 145, 0.05) 0%, rgba(213, 184, 147, 0.05) 100%);
+}
+
+.badge-lg {
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.progress-section {
+    padding: 20px 30px;
+}
+
+/* Timeline */
+.tracking-timeline {
+    padding: 30px 10px;
+    position: relative;
+}
+
+.tracking-timeline::before {
+    content: '';
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: #e9ecef;
+    z-index: 1;
+}
+
+.timeline-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background: #e9ecef;
+    color: #6c757d;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    border: 4px solid white;
+    transition: all 0.3s ease;
+}
+
+.timeline-step.active .step-icon {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    color: white;
+    box-shadow: 0 5px 15px rgba(97, 120, 145, 0.3);
+}
+
+.step-label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6c757d;
+    text-align: center;
+}
+
+.timeline-step.active .step-label {
+    color: var(--primary);
+}
+
+/* Detail Box */
+.detail-box {
+    background: white;
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.detail-box h5 {
+    color: var(--primary);
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--accent);
+}
+
+.detail-table {
+    width: 100%;
+}
+
+.detail-table tr {
+    border-bottom: 1px dashed #e9ecef;
+}
+
+.detail-table tr:last-child {
+    border-bottom: none;
+}
+
+.detail-table td {
+    padding: 12px 5px;
+}
+
+.detail-table .text-muted {
+    width: 45%;
+    font-weight: 500;
+}
+
+.detail-table .fw-bold {
+    width: 55%;
+    color: var(--dark);
+}
+
+/* Action Buttons */
+.action-buttons {
+    margin-top: 30px;
+}
+
+/* ========================================
+   PROFESSIONAL RECEIPT STYLING (Same as cashier.css)
+   ======================================== */
+
+/* Receipt Container */
+.receipt-container {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.receipt {
+    background: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border: 1px solid #dee2e6;
+}
+
+/* Company Header */
+.receipt-header {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    color: white;
+    padding: 30px;
+    text-align: center;
+    border-bottom: 4px solid var(--accent);
+}
+
+.company-logo {
+    margin-bottom: 15px;
+}
+
+.receipt-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.company-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin: 10px 0;
+    letter-spacing: 1px;
+}
+
+.company-address,
+.company-contact {
+    margin: 5px 0;
+    opacity: 0.95;
+    font-size: 0.95rem;
+}
+
+.receipt-type-badge {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px dashed rgba(255,255,255,0.3);
+}
+
+.badge-order {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 2px solid white;
+}
+
+.badge-deposit {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 2px solid white;
+}
+
+.badge-payment {
+    background: rgba(255,255,255,0.2);
+    padding: 8px 24px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    border: 2px solid white;
+}
+
+/* Receipt Info Bar */
+.receipt-info-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+}
+
+.info-value {
+    font-size: 1rem;
+    color: var(--dark);
+}
+
+/* Receipt Sections */
+.receipt-section {
+    padding: 25px 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.section-title {
+    color: var(--secondary);
+    font-weight: 700;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+}
+
+/* Details Tables */
+.details-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.details-table tr {
+    border-bottom: 1px dashed #e9ecef;
+}
+
+.details-table tr:last-child {
+    border-bottom: none;
+}
+
+.details-table td {
+    padding: 10px 5px;
+}
+
+.label-col {
+    width: 40%;
+    color: #6c757d;
+    font-weight: 500;
+}
+
+.value-col {
+    width: 60%;
+    color: var(--dark);
+    font-weight: 400;
+}
+
+/* Payment Section */
+.payment-section {
+    background: #f8f9fa;
+}
+
+.payment-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.payment-table tr {
+    border-bottom: 1px solid #dee2e6;
+}
+
+.payment-table td {
+    padding: 12px 5px;
+    font-size: 1rem;
+}
+
+.amount-col {
+    text-align: right;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.deposit-row {
+    background: rgba(25, 135, 84, 0.05);
+}
+
+.deposit-row .amount-col {
+    color: #198754;
+    font-weight: 700;
+}
+
+.balance-row {
+    background: rgba(220, 53, 69, 0.05);
+    border-top: 2px solid #dc3545 !important;
+    border-bottom: none !important;
+}
+
+.balance-row td {
+    padding: 15px 5px;
+    font-size: 1.1rem;
+}
+
+.balance-row .amount-col {
+    color: #dc3545;
+    font-size: 1.3rem;
+}
+
+.payment-row {
+    background: rgba(13, 110, 253, 0.05);
+}
+
+.payment-row .amount-col {
+    color: #0d6efd;
+    font-weight: 700;
+}
+
+.total-row {
+    background: rgba(25, 135, 84, 0.1);
+    border-top: 3px solid #198754 !important;
+    border-bottom: none !important;
+}
+
+.total-row td {
+    padding: 15px 5px;
+    font-size: 1.1rem;
+}
+
+.status-paid {
+    color: #198754 !important;
+    font-size: 1.2rem;
+}
+
+/* Status Section */
+.status-section {
+    background: rgba(97, 120, 145, 0.03);
+}
+
+.status-display .progress {
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.status-display .progress-bar {
+    font-size: 0.85rem;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+/* Receipt Footer */
+.receipt-footer {
+    padding: 25px 30px 30px;
+}
+
+.footer-divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--accent), transparent);
+    margin-bottom: 20px;
+}
+
+.footer-notes {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.footer-notes p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+    color: #856404;
+}
+
+.footer-notes i {
+    margin-right: 8px;
+}
+
+.footer-thank-you {
+    text-align: center;
+    margin: 30px 0 20px;
+}
+
+.footer-thank-you p {
+    margin: 10px 0;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.signature-line {
+    margin-top: 40px;
+    color: #6c757d;
+}
+
+.signature-label {
+    margin-top: 5px;
+    font-size: 0.85rem;
+    color: #6c757d;
+    font-weight: 400;
+}
+
+.footer-powered {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #dee2e6;
+}
+
+.footer-powered small {
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .page-subtitle {
+        font-size: 1rem;
+    }
+
+    .tracking-card .card-header {
+        padding: 30px 20px;
+    }
+
+    .tracking-card .card-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .tracking-form {
+        padding: 30px 20px;
+    }
+
+    .status-guide {
+        padding: 30px 20px;
+    }
+
+    .btn-primary,
+    .btn-light {
+        margin-top: 15px;
+    }
+
+    .tracking-timeline::before {
+        display: none;
+    }
+
+    .timeline-step {
+        margin-bottom: 15px;
+    }
+}
+
+/* ========================================
+   PRINT STYLES FOR RECEIPT
+   ======================================== */
+
+@media print {
+    /* Hide navigation and UI elements */
+    .navbar,
+    .page-hero,
+    .tracking-card,
+    .info-card,
+    .status-guide,
+    .cta-section,
+    .footer,
+    .action-buttons,
+    .no-print {
+        display: none !important;
+    }
+
+    /* Reset body and page */
+    body {
+        background: white !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .tracking-section {
+        background: white !important;
+        padding: 0 !important;
+    }
+
+    .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Receipt container for print */
+    .receipt-container {
+        display: block !important;
+        background: white !important;
+        padding: 20px !important;
+        margin: 0 !important;
+        box-shadow: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .receipt {
+        display: block !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border: none !important;
+        page-break-after: avoid;
+    }
+
+    /* Ensure receipt elements are visible */
+    .receipt-header,
+    .receipt-info-bar,
+    .receipt-section,
+    .receipt-footer,
+    .section-title,
+    .details-table,
+    .payment-table,
+    .company-name,
+    .company-address,
+    .company-contact,
+    .receipt-type-badge {
+        display: block !important;
+        visibility: visible !important;
+    }
+
+    /* Print header */
+    .receipt-header {
+        background: #25344F !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color: white !important;
+        page-break-inside: avoid;
+        padding: 20px !important;
+    }
+
+    .receipt-logo {
+        display: inline-block !important;
+        width: 40px !important;
+        height: 40px !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Print info bar */
+    .receipt-info-bar {
+        display: flex !important;
+        background: #f8f9fa !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        page-break-inside: avoid;
+        padding: 10px 20px !important;
+    }
+
+    /* Sections */
+    .receipt-section {
+        display: block !important;
+        page-break-inside: avoid;
+        padding: 15px 20px !important;
+    }
+
+    /* Status section */
+    .status-section {
+        background: rgba(97, 120, 145, 0.03) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .status-display {
+        page-break-inside: avoid;
+    }
+
+    .progress {
+        display: block !important;
+        background: #e9ecef !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .progress-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .bg-success .progress-bar {
+        background: #198754 !important;
+    }
+
+    .bg-warning .progress-bar {
+        background: #ffc107 !important;
+    }
+
+    .bg-info .progress-bar {
+        background: #0dcaf0 !important;
+    }
+
+    .bg-primary .progress-bar {
+        background: #0d6efd !important;
+    }
+
+    .bg-secondary .progress-bar {
+        background: #6c757d !important;
+    }
+
+    /* Badge */
+    .badge-lg {
+        border: 2px solid #000;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Tables */
+    .details-table,
+    .payment-table {
+        display: table !important;
+        width: 100% !important;
+    }
+
+    .details-table tr,
+    .payment-table tr {
+        display: table-row !important;
+    }
+
+    .details-table td,
+    .payment-table td {
+        display: table-cell !important;
+    }
+
+    /* Payment section colors */
+    .payment-section {
+        background: #f8f9fa !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .deposit-row {
+        background: rgba(25, 135, 84, 0.05) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .deposit-row .amount-col {
+        color: #198754 !important;
+    }
+
+    .balance-row {
+        background: rgba(220, 53, 69, 0.05) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border-top: 2px solid #dc3545 !important;
+    }
+
+    .balance-row .amount-col {
+        color: #dc3545 !important;
+    }
+
+    .payment-row {
+        background: rgba(13, 110, 253, 0.05) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .payment-row .amount-col {
+        color: #0d6efd !important;
+    }
+
+    .total-row {
+        background: rgba(25, 135, 84, 0.1) !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border-top: 3px solid #198754 !important;
+    }
+
+    .status-paid {
+        color: #198754 !important;
+    }
+
+    /* Footer notes */
+    .footer-notes {
+        background: #fff3cd !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        border-left: 4px solid #ffc107 !important;
+    }
+
+    .footer-notes p {
+        color: #856404 !important;
+    }
+
+    /* Signature line */
+    .signature-line {
+        border-bottom: 2px solid #000;
+        padding-bottom: 2px;
+    }
+
+    /* Page layout */
+    @page {
+        size: A4;
+        margin: 15mm;
+    }
+
+    /* Ensure no page breaks in critical areas */
+    .receipt-header,
+    .receipt-info-bar,
+    .section-title,
+    .footer-thank-you {
+        page-break-inside: avoid;
+    }
+
+    /* Hide scrollbars */
+    * {
+        overflow: visible !important;
+    }
+
+    /* Ensure tracking status is displayed */
+    .tracking-status {
+        display: block !important;
+        box-shadow: none !important;
+        border: none !important;
+        padding: 0 !important;
+    }
+}

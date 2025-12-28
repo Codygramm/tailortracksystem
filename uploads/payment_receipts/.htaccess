@@ -1,0 +1,10 @@
+# Protect uploaded receipt files
+# Allow only specific file types to be accessed
+<FilesMatch "\.(jpg|jpeg|png|pdf)$">
+    Allow from all
+</FilesMatch>
+
+# Deny execution of PHP files in this directory
+<FilesMatch "\.php$">
+    Deny from all
+</FilesMatch>
